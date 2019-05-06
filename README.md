@@ -9,11 +9,11 @@ For usage examples, see [example.php](https://github.com/mmousawy/simple-php-ga/
 
 ---
 
-**Example 1: Send a normal query (will show up in Google Analytics):**
+**Example 1: Send a normal hit (will show up in Google Analytics):**
 ```php
 $simplePhpGa = new MMousawy\SimplePhpGa();
 
-$result = $simplePhpGa->query([
+$result = $simplePhpGa->send([
   // Tracking ID (required; http://goo.gl/a8d4RP#tid)
   'tid' => 'UA-XXXXX-Y',
   // Hit type (required; default: 'pageview'; http://goo.gl/a8d4RP#t)
@@ -23,16 +23,16 @@ $result = $simplePhpGa->query([
 ]);
 
 /**
- * Check if query was successful.
- * Note: this does guarantee that the query was valid!
- * Use SimplePhpGa->debug() like in example 2 to check if the query will be accepted.
+ * Check if hit was successful.
+ * Note: this does guarantee that the hit was valid!
+ * Use SimplePhpGa->debug() like in example 2 to check if the hit will be accepted.
  */
 if ($result) {
   echo 'Success!' . PHP_EOL;
 }
 ```
 
-**Example 2: Send a debug query (for validating hits, will not show up in Google Analytics):**
+**Example 2: Send a debug hit (for validating hits, will not show up in Google Analytics):**
 ```php
 $simplePhpGa = new MMousawy\SimplePhpGa();
 
