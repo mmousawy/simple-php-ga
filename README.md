@@ -28,7 +28,7 @@ $result = $simplePhpGa->send([
  * Use SimplePhpGa->debug() like in example 2 to check if the hit will be accepted.
  */
 if ($result) {
-  echo 'Success!' . PHP_EOL;
+  echo 'Success!';
 }
 ```
 
